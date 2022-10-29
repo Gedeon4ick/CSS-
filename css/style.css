@@ -1,0 +1,226 @@
+/* 1. * обращение к универсальному селектру */
+
+* {
+    font-family: 'MuseoModerno', cursive;
+    padding: 0;
+    margin: 0;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* 2. #X обращение к индивидуальному индитификатору */
+
+#container {
+    padding: 15px;
+    border: 2px solid  black;
+    width: 960px;
+    margin: auto;
+   }
+
+/* 3. .X обращение к селктру, на странице он может быть не один */
+
+.block {
+    background: red;
+    width: 100px;
+    height: 100px;
+}
+
+/* 4. X Y   Присваиваем стиль определенному элементу списка  */
+
+ul li {
+    list-style-type: none;
+}
+
+ul span {
+    text-decoration: underline;
+    font-size: 20px;
+}
+
+/* 5. X  - обращение к элементом по типу элемента))) */
+
+a {
+    font-size: 20px;
+}
+
+
+/* 6. X:visited и X:link    -  обращение к активной и неактивной ссылке черзе псевдоклассы */
+/* Внимание!!!!!!!!это чето не оч получилось!!!!!!!!!!!!!! */
+.butttton {
+    margin-top: 10px;
+}
+
+a:link { color: blue; }
+a:visted { color: greenyellow; }
+
+/* 7. X + Y    обращение к соседнему ближайшему селектру */
+
+span + p {
+    color: red;
+    text-decoration: underline;
+}
+
+/* 8. X > Y  - обращение к прямому потомку */
+
+#tablica {
+    width: 100px;
+    margin-top: 10px;
+}
+
+li > ul {
+    border: 1px solid black;
+}
+
+
+/* 9. X ~ Y  - выбирает все элементы Y после X */
+
+.prosto .X ~ p {
+    color: blue;
+}
+
+
+/* 10. X[title] селектр атребутов, выберет только те ссылки, у которых есть указанный атрибут */
+
+q[title] {
+    color:rgb(74, 103, 198);
+}
+
+/* 11. X[href="foo"] выбор ссылок по атрибуту и окраска их в красный цвет */
+
+a[href="http://net.tutsplus.com"] {
+    color: red; 
+}
+
+/* 12. X[href*="yandex"] менее строгий выбор ссылки. Звёздочка означает, что указанное значение должно быть частью указанного атрибута. */
+
+.links a[href*="yandex"] {
+    color: rgb(212, 255, 22); 
+}
+
+/* 13. X[href^="http"] - обращаемся по атрибуту в начале строки с помощью - ^ */
+
+
+.start a[href^="https"] {
+    color:aqua;
+    padding-left: 25px;
+}
+
+/* 
+14. X[href$=".jpg"] - обращаемс к элементу через атрибут href, $  означает что ищем строку которая кончается на jpg. В качестве эксперемента добавил картинку с атрибутом src и обратился к содержимому этого атрибута для стилизации */
+
+.icons a[href$=".jpg"] {
+    color: red;
+}
+
+.icons img[src$='.png'] {
+    height: 100px;
+}
+
+/* 15. X[data-*="foo"] Для того чтобы выбрать изображения с разными форматами необходимо прописать атрибут data-filetype="image" и вставить его в ссылку к каждому изображению */
+
+.all a[data-filetype="image"] {
+    padding: 25px;
+    color: rgb(255, 24, 178);
+   }
+
+/* 16. X[foo~="bar"] - позволяет нам работать с 2мя и более атрибутами, так же значения этих атрибутов можно задавать через пробел */
+
+a[data-info~="external"] {
+    color: red;
+}
+
+a[data-info~="image"] {
+    border: 1px solid black;
+}
+
+/* 17. X:checked выберет только отмеченные элементы пользовательского интерфейса: радиокнопки или чекбоксы */
+
+/* 18. X:after */
+
+/* 19. X:hover этот псевдокласс изменяет поведение кнопки года на нее наводишь */
+
+button:hover {
+    border-bottom: 1px solid black;
+    background-color: aqua;
+   }
+
+   /* 20. X:not(selector) - выбор всез тегов, кроме одного с id="par" */
+
+.yng p:not(#par){
+    color: red;
+}
+
+/* 21. X::pseudoElement - данный псевдокласс обращается ко всем заглавным буквам параграфа и меняет их стили */
+
+
+.kol p::first-letter {
+    float: left;
+    font-size: 1.1em;
+    font-weight: bold;
+    font-family: cursive;
+    padding-right: 2px;
+   }
+
+
+   /* 22. X:nth-child(n) - этот псевдокласс позволяет нам выбрать конкретный элемент из списка */
+
+.hop {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.hop div:nth-child(3) {
+    order: -1;
+}
+
+/* 23. X:nth-last-child(n) - данный псевдокласс меняет отсчет с конца списка */
+
+.last li:nth-last-child(2) {
+    color: red;
+}
+
+/* 24. X:nth-of-type(n) - обращаемся к списку по типу */
+
+.type ul:nth-of-type(3) {
+    border: 1px solid black;
+}
+
+/* 25. X:nth-last-of-type(n) - обращаемся к списку по типу, только с конца */
+
+.exit ul:nth-last-of-type(3) {
+    border: 1px solid black;
+}
+
+/* 26. X:first-child - данный псевдокласс позволяет обратиться к первому дочернему жлементу списка */
+
+.ramka ul li:first-child {
+    border: 1px solid black;
+}
+
+/* 27. X:last-child - обращение к последнему дочернему элементу списка */
+
+.vovka ul > li:last-child {
+    color: green;
+    border: 1px solid black;
+}
+
+/* 28. X:only-child - выбор элемента являющегося единственным наследником */
+
+.only_childe p:only-child {
+    color: rgb(72, 0, 173);
+}
+
+   /* 29. X:only-of-type - выбирает дочерний элемент, только если он единственный у родителя  */
+
+.final ul > li:only-of-type {
+    font-size: 20px;
+}
+
+/* 30. X:first-of-type - выбирает дочерний элемент, только если он единственный у родителя */
+.first ul:first-of-type > li:nth-child(2) {
+    font-weight: bold;
+    color:rgb(212, 255, 22)
+}

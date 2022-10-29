@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Селктры CSS</title>
+</head>
+<body>
+    <div class="promo">
+       
+        <div id="container">
+            <h1>Примеры каждого селектра в html и css</h1>
+            <p style="color:darkred"> 1. * обращение к универсальному селектру. Изменен шрифт, обнулины как путин padding и margin</p>
+            <br>
+            <p style="color:darkred"> 2. #X обращение к индивидуальному индитификатору container. задал ширину и border</p>
+            <br>
+            <p style="color:darkred"> 3. .X обращение к селктру, на странице он может быть не один</p>
+            <br>
+            <div class="block">
+            </div>
+            <br>
+            <p style="color:darkred"> 4. X Y   Присваиваем стиль определенному элементу списка. Убрал точки перед элементом списка</p>
+            <ul class="ul">
+                    
+                <li class="li"></li>
+                <li class="li">w</li>
+                <li class="li">e</li>
+                <li class="li">e</li>
+                <br>
+            <p style="color:darkred"> 5. X  - обращение к элементом по типу элемента. Изменил размер шрифта и подчеркнул Lorem</p> 
+                <span>lorem</span>
+                <span>lorem</span>
+            </ul>
+            <br>
+            <p style="color:darkred">6.  X:visited и X:link    -  обращение к активной и неактивной ссылке черзе псевдоклассы</p>
+            <div class="butttton">
+                <a href="#">Привет</a>
+            </div>
+            <br>
+            <p style="color:darkred">  7. X + Y    обращение к соседнему ближайшему селектру</p>
+            <br>
+            <span>Привет</span><p>Hello</p>
+            <br>
+            <p style="color:darkred"> 8. X > Y  - обращение к прямому потомку. Добавил прямому потомку border</p>
+            <div id="tablica">
+                <ul>
+                   <li> List Item
+                     <ul>
+                        <li> Child </li>
+                     </ul>
+                   </li>
+                   <li> List Item </li>
+                </ul>
+             </div>
+             <br>
+            <p style="color:darkred">9. X ~ Y  - выбирает все элементы Y после X</p>
+            
+            <div class="prosto">
+                <div class="X"></div>
+                <p>слово</p>
+                <p>слово</p>
+                <p>слово</p>
+            </div>
+            <br>
+            <p style="color:darkred">10. X[title] селектр атребутов, выберет только те ссылки, у которых есть указанный атрибут</p>
+
+            
+            <br>
+            <p>Продолжая известный закон Мерфи, который гласит: <q>Если неприятность 
+                может случиться, то она обязательно случится</q>, можем ввести свое наблюдение: 
+            <q title>После того, как веб-страница 
+                будет корректно отображаться в одном браузере, выяснится, 
+                что она неправильно показывается в другом</q>.</p>
+            
+            <br>
+            <p style="color:darkred">11. X[href="foo"] выбор ссылок по атрибуту и окраска их в красный цвет</p>
+            <div class="hard_links">
+                <a href="#">текст</a>
+                <a href="http://net.tutsplus.com">текст</a>
+                <a href="#">текст</a>
+                <a href="#">текст</a>
+                <a href="#">текст</a>
+            </div>
+
+            <br>
+            <p style="color:darkred">12. X[href*="yandex"] менее строгий выбор ссылки. Звёздочка означает, что указанное значение должно быть частью указанного атрибута.</p>
+            <div class="links">
+                <a href="https://www.udemy.com/">текст</a>
+                <a href="https://yandex.kz/">текст</a>
+                <a href="https://www.udemy.com/">текст</a>
+                <a href="https://plus.yandex.kz/">текст</a>
+                <a href="https://www.udemy.com/">текст</a>
+            </div>
+            <br>
+            <p style="color:darkred">13. X[href^="http"] - обращаемся по атрибуту в начале строки с помощью - ^ </p>
+            <div class="start">
+                <a href="https://www.udemy.com/course/webdeveloper/learn/lecture/15021094#notes">текст</a>
+                <a href="https://www.udemy.com/courses/development/">текст</a>
+                <a href="../Bootstrap/index.html">текст</a>
+            </div>
+            <br>
+            <p style="color:darkred">14. X[href$=".jpg"] - обращаемс к элементу через атрибут href, $  означает что ищем строку которая кончается на jpg. В качестве эксперемента добавил картинку с атрибутом src и обратился к содержимому этого атрибута для стилизации</p>
+            <div class="icons">
+                <a href="./css/icons/019_timer_time_stopwatch_2-64.jpg">ИКОНКА</a>
+                <a href="./css/icons/app-08-hand-cart-64.jpg">ИКОНКА</a>
+                <a href="./css/icons/messages-64.png">ИКОНКА</a>
+                <img src="./css/icons/cup.png">
+            </div>
+
+            <br>
+            <p style="color:darkred">15. X[data-*="foo"] Для того чтобы выбрать изображения с разными форматами необходимо прописать атрибут data-filetype="image" и вставить его в ссылку к каждому изображению</p>
+
+            <div class="all">
+                <a href="./css/icons/messages-64.jpg" data-filetype="image">Результат</a>
+                <a href="./css/icons/messages-64.png" data-filetype="image">Результат</a>
+                <a href="./css/icons/cup.svg" data-filetype="image">Результат</a>
+                <a href="./css/icons/cup.pdf" data-filetype="image">Результат</a>
+                <a href="./css/icons/cup.pdf">Результат</a>
+            </div>
+            <br>
+            <p style="color:darkred">16. X[foo~="bar"] - позволяет нам работать с 2мя и более атрибутами, так же значения этих атрибутов можно задавать через пробел</p>
+                <div class="two">
+                    <a href="./css/icons/cup.png" data-info="external image">two</a>
+            </div>
+            <br>
+            <p style="color:darkred">17. X:checked выберет только отмеченные элементы пользовательского интерфейса: радиокнопки или чекбоксы</p>
+            <br>
+            <p style="color:darkred">18. X:after</p>
+            <br>
+            <p style="color:darkred">19. X:hover этот псевдокласс изменяет поведение кнопки года на нее наводишь</p>
+            <button>првиет</button>
+            <br>
+            <p style="color:darkred">20. X:not(selector) - выбор всез тегов, кроме одного с id="par"</p>
+                <div class="yng">
+                    <p id="par">tex</p>
+                    <p class="not">tex</p>
+                    <p class="not">tex</p>
+            </div>
+
+            <br>
+            <p style="color:darkred">21. X::pseudoElement - данный псевдокласс обращается ко всем заглавным буквам параграфа и меняет их стили</p>
+
+            <div class="kol">
+                <p>Привет</p>
+                <p>круто</p>
+                <p>пока</p>
+            </div>
+
+            <br>
+            <p style="color:darkred">  22. X:nth-child(n) - этот псевдокласс позволяет нам выбрать конкретный элемент из списка</p>
+
+            <div class="hop">
+                <div>1</div>
+                <div>2</div>
+                <div>3</div>
+            </div>
+            
+            <br>
+            <p style="color:darkred">23. X:nth-last-child(n) - данный псевдокласс меняет отсчет с конца списка и обращается к данному элементу</p>
+
+            <div class="last">
+                <ul>
+                    <li>1</li>
+                    <li>2</li>
+                    <li>3</li>
+                    <li>4</li>
+                    <li>5</li>
+                    <li>6</li>
+                    <li>7</li>
+                    <li>8</li>
+                    <li>9</li>
+                    <li>10</li>
+                </ul>
+            </div>
+
+            <br>
+            <p style="color:darkred">24. X:nth-of-type(n) - обращаемся к списку по типу</p>
+
+            <div class="type">
+                <ul>
+                    <li>lorem</li>
+                    <li>lorem</li>
+                    <li>lorem</li>
+                </ul>
+                <ul>
+                    <li>text</li>
+                    <li>text</li>
+                    <li>text</li>
+                </ul>
+                <ul>
+                    <li>Node</li>
+                    <li>Node</li>
+                    <li>Node</li>    
+                </ul>
+            </div>
+
+            <br>
+            <p style="color:darkred"> 25. X:nth-last-of-type(n) - обращаемся к списку по типу, только с конца</p>
+
+            <div class="exit">
+                <ul>
+                    <li>lorem</li>
+                    <li>lorem</li>
+                    <li>lorem</li>
+                </ul>
+                <ul>
+                    <li>text</li>
+                    <li>text</li>
+                    <li>text</li>
+                </ul>
+                <ul>
+                    <li>Node</li>
+                    <li>Node</li>
+                    <li>Node</li>    
+                </ul>
+            </div>
+
+            <br>
+            <p style="color:darkred">26. X:first-child - данный псевдокласс позволяет обратиться к первому дочернему жлементу списка</p>
+            <div class="ramka">
+                <ul>
+                    <li>lorem</li>
+                    <li>lorem</li>
+                    <li>lorem</li>
+                </ul>
+            </div>
+
+            <br>
+            <p style="color:darkred">27. X:last-child - обращение к последнему дочернему элементу списка</p>
+            <div class="vovka">
+                <ul>
+                    <li>lorem</li>
+                    <li>lorem</li>
+                    <li>lorem</li>
+                </ul>
+            </div>
+
+            
+            <br>
+            <p style="color:darkred"> 28. X:only-child - выбор элемента являющегося единственным наследником</p>
+
+            <div class="only_childe"><p> My paragraph here. </p></div>
+
+            <br>
+            <p style="color:darkred">29. X:only-of-type - выбирает дочерний элемент, только если он единственный у родителя </p>
+            <div class="final">
+                <ul>
+                    <li>lorem</li>
+                </ul>
+                <ul>
+                    <li>lorem</li>
+                    <li>lorem</li>
+                    <li>lorem</li>
+                </ul>
+            </div>
+
+            <br>
+            <p style="color:darkred">30. X:first-of-type - выбирает дочерний элемент, только если он единственный у родителя </p>
+
+            <div class="first">
+                <div>
+                    <p>lorem</p>
+                    <p>lorem</p>
+                    <p>lorem</p>
+                </div>
+                <ul>
+                    <li>lorem</li>
+                    <li>lorem</li>
+                    <li>lorem</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
